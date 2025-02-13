@@ -1,0 +1,6 @@
+ public int kthGrammar(int n, int k) {//TC->o(n),SC->o(1)
+
+        int count = Integer.bitCount(k-1);
+        return count%2;
+    
+    }
