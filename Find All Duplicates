@@ -1,0 +1,31 @@
+  // public List<Integer> findDuplicates(int[] nums) {//tc->o(n),sc->o(1)
+    //     List<Integer> duplicates = new ArrayList<>();
+    //     for (int num : nums) {
+    //         int res = nums[Math.abs(num) - 1];
+    //         if (res < 0) {
+    //             duplicates.add(Math.abs(num));
+    //             continue;
+    //         }
+    //         nums[Math.abs(num) - 1] *= -1;
+    //     }
+    //     return duplicates;
+    // }
+
+    /*
+    ***
+    ***
+    ***
+    */
+
+    public List<Integer> findDuplicates(int[] nums) {//tc->o(n),sc->o(1)
+        int[] freq = new int[100001];
+        int c = 0;
+        List<Integer> ans = new ArrayList<>();
+        for (int i : nums) {
+            freq[i]++;
+            if (freq[i] >= 2) {
+                ans.add(i);
+            }
+        }
+        return ans;
+    } 
