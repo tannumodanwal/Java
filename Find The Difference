@@ -1,0 +1,15 @@
+public char findTheDifference(String s, String t) {
+        int arrStr[]=new int[256];
+        for(int i=0;i<t.length();i++){
+            arrStr[t.charAt(i)]++;
+        }
+        for(int i=0;i<s.length();i++){
+            arrStr[s.charAt(i)]--;
+        }
+        for(int i=0;i<256;i++){
+            if(arrStr[i]!=0){
+                return (char)(i);
+            }
+        }
+        return ' ';
+    }
